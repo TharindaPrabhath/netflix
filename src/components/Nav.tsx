@@ -3,7 +3,7 @@ import "../styles/Nav.css";
 import NetflixLogo from "../assets/netflix-logo.png";
 import SearchIcon from "../assets/search-white.svg";
 import MobileMenu from "../assets/menu-white.svg";
-import CloseIcon from "../assets/close_white_24dp.svg";
+import CloseIcon from "../assets/close-white.svg";
 
 import { useState } from "react";
 import { useEffect } from "react";
