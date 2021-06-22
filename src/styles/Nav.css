@@ -9,7 +9,11 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: grey;
+}
+
+a:hover {
+  color: var(--netflix-white);
 }
 
 .nav {

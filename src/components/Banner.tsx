@@ -2,25 +2,51 @@ import "../styles/Banner.css";
 
 import PlayIcon from "../assets/play_circle-black.svg";
 import AddIcon from "../assets/add-white.svg";
+import { useState } from "react";
+import { useEffect } from "react";
+
+import axios from "../utils/axios";
+import Requests from "../utils/Requests";
+
+interface TMDB_Film {
+  backdrop_path: string;
+  title: string;
+  name: string;
+  overview: string;
+  original_name: string;
+}
 
 function Banner() {
+  const [film, setFilm] = useState<TMDB_Film>();
+
+  useEffect(() => {
+    fetchFilm();
+  }, []);
+
+  async function fetchFilm() {
+    const response = await axios.get(Requests.fetchTrending);
+    setFilm(
+      response.data.results[
+        Math.floor(Math.random() * response.data.results.length - 1)
+      ]
+    );
+  }
+
   return (
     <div
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url("https://res.cloudinary.com/practicaldev/image/fetch/s--THrf5Yjw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6brz4p7iq7j1mulo1nv.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${film?.backdrop_path}")`,
         backgroundPosition: "center center",
+        //backgroundBlendMode: "multiply",
       }}
     >
       <div className="banner__content">
-        <h1 className="banner__title">Name of the Film</h1>
-        <p className="banner__info">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias,
-          itaque corrupti, facilis non dignissimos totam velit alias aliquam
-          porro cum, expedita rerum rem temporibus exercitationem at laboriosam
-          veniam neque architecto.
-        </p>
+        <h1 className="banner__title">
+          {film?.title || film?.name || film?.original_name}
+        </h1>
+        <p className="banner__info">{film?.overview}</p>
         <div className="banner__buttons">
           <button className="play-btn">
             <img src={PlayIcon} alt="Play" />
@@ -32,7 +58,7 @@ function Banner() {
           </button>
         </div>
       </div>
-      <div className="banner__fade-bottom">Hello</div>
+      {/* <div className="banner__fade-bottom"></div> */}
     </div>
   );
 }

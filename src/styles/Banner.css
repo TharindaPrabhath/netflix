@@ -37,6 +37,10 @@ button {
   line-height: 1em;
 }
 
+.banner__info {
+  width: 400px;
+}
+
 .banner__buttons {
   display: flex;
   flex-direction: row;
