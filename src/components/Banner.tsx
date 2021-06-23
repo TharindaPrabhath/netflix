@@ -6,15 +6,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 import axios from "../utils/axios";
-import Requests from "../utils/Requests";
-
-interface TMDB_Film {
-  backdrop_path: string;
-  title: string;
-  name: string;
-  overview: string;
-  original_name: string;
-}
+import Requests from "../models/Requests";
+import IMAGE_BASE_URL from "../models/Requests";
+import TMDB_Film from "../models/TMDB_Film";
 
 function Banner() {
   const [film, setFilm] = useState<TMDB_Film>();
@@ -32,6 +26,10 @@ function Banner() {
     );
   }
 
+  const truncate = (s: string) => {
+    return s?.length > 50 ? s.substring(0, s.length - 1) + "..." : s;
+  };
+
   return (
     <div
       className="banner"
@@ -42,23 +40,26 @@ function Banner() {
         //backgroundBlendMode: "multiply",
       }}
     >
-      <div className="banner__content">
-        <h1 className="banner__title">
-          {film?.title || film?.name || film?.original_name}
-        </h1>
-        <p className="banner__info">{film?.overview}</p>
-        <div className="banner__buttons">
-          <button className="play-btn">
-            <img src={PlayIcon} alt="Play" />
-            Play
-          </button>
-          <button className="add-btn">
-            <img src={AddIcon} alt="Play" />
-            My List
-          </button>
+      <div className="banner__left-col">
+        <div className="banner__content">
+          <h1 className="banner__title">
+            {film?.title || film?.name || film?.original_name}
+          </h1>
+          <p className="banner__info">{truncate(film?.overview!)}</p>
+          <div className="banner__buttons">
+            <button className="play-btn">
+              <img src={PlayIcon} alt="Play" />
+              Play
+            </button>
+            <button className="add-btn">
+              <img src={AddIcon} alt="Play" />
+              My List
+            </button>
+          </div>
         </div>
       </div>
-      {/* <div className="banner__fade-bottom"></div> */}
+
+      <div className="banner__fade-bottom"></div>
     </div>
   );
 }

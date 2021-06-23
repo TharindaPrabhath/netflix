@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 button {
   display: flex;
   justify-content: center;
@@ -23,12 +27,23 @@ button {
   color: var(--netflix-white);
 }
 
+.banner__left-col {
+  height: 100%;
+  width: 750px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+}
+
 .banner__content {
   position: absolute;
-  bottom: 5em;
   padding: 1em;
   display: flex;
   flex-direction: column;
+  bottom: 5em;
   gap: 1em;
 }
 
@@ -39,6 +54,7 @@ button {
 
 .banner__info {
   width: 400px;
+  font-weight: 400;
 }
 
 .banner__buttons {
@@ -53,6 +69,9 @@ button {
 }
 
 .banner__fade-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   height: 7.4em;
   background: linear-gradient(
     180deg,
