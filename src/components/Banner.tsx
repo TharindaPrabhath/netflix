@@ -27,7 +27,7 @@ function Banner() {
   }
 
   const truncate = (s: string) => {
-    return s?.length > 50 ? s.substring(0, s.length - 1) + "..." : s;
+    return s?.length > 150 ? s.substring(0, 150) + "..." : s;
   };
 
   return (
@@ -37,7 +37,6 @@ function Banner() {
         backgroundSize: "cover",
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${film?.backdrop_path}")`,
         backgroundPosition: "center center",
-        //backgroundBlendMode: "multiply",
       }}
     >
       <div className="banner__left-col">
