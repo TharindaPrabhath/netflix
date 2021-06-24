@@ -6,6 +6,7 @@ import Banner from "../components/Banner";
 import Row from "../components/Row";
 
 import Requests from "../models/Requests";
+import Footer from "../components/Footer";
 
 function HomeScreen() {
   return (
@@ -47,6 +48,7 @@ function HomeScreen() {
         fetchUrl={Requests.fetchDocumenteries}
         isLargeRow={true}
       />
+      <Footer />
     </div>
   );
 }
