@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: var(--netflix-white);
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e90e20;
+}
+
+.profile-screen {
+  background-color: var(--netflix-black-2);
+  height: 100vh;
+  color: var(--netflix-white);
+}
+
+.logo {
+  width: 8em;
+  cursor: pointer;
+}
+
+.header__profile {
+  width: 2em;
+  cursor: pointer;
+}
+
+.body__profile {
+  display: none;
+}
+
+.content {
+}
+
+.content__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -1em 1em;
+}
+
+.content__body {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 2em;
+}
+
+.content__body h1 {
+  font-weight: 500;
+  font-size: 2.5em;
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.3em;
+}
+
+.content__body .user-email {
+  margin-top: 1em;
+  background-color: rgb(128, 128, 128);
+  padding: 0.5em 1em;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.plans h3 {
+  margin-top: 1em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.6);
+  padding-bottom: 0.2em;
+  font-weight: 500;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-btn {
+  padding: 0.5em 1em;
+  font-weight: 600;
+  background-color: var(--netflix-red);
+}
+
+.sign-out-btn {
+  margin-top: 3em;
+  width: 100%;
+  background-color: var(--netflix-red);
+  font-weight: 600;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 10em;
+  }
+
+  .content__body h1 {
+    border-bottom: none;
+  }
+
+  .body__profile {
+    display: initial;
+    width: 5em;
+    margin-top: 1em;
+  }
+
+  .body__cols {
+    display: flex;
+  }
+
+  .right-col {
+    margin-left: 1em;
+    width: 80%;
+  }
+}
