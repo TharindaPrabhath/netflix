@@ -1,5 +1,5 @@
 import React from "react";
-//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
@@ -10,18 +10,21 @@ import "./styles/root.css";
 function App() {
   return (
     <div className="app">
-      <ProfileScreen />
+      {/* <ProfileScreen /> */}
       {/* <WelcomeScreen /> */}
-      {/* <Router>
+      <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <HomeScreen />
           </Route>
-          <Route path="/welcome">
+          <Route path="/welcome" exact>
             <WelcomeScreen />
           </Route>
+          <Route path="/profile" exact>
+            <ProfileScreen />
+          </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }
