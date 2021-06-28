@@ -8,11 +8,14 @@ import CloseIcon from "../assets/close-white.svg";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useHistory } from "react-router-dom";
 
 function Nav() {
   const [blackNav, setBlackNav] = useState(false);
   const [mobileMenuClick, setMobileMenuClick] = useState(false);
   const isMobile = useMediaQuery({ query: "(min-width: 600px)" });
+
+  const history = useHistory();
 
   useEffect(() => {
     window.addEventListener("scroll", transitionNav);
@@ -83,6 +86,7 @@ function Nav() {
 
       <img
         className="nav__avatar"
+        onClick={() => history.push("/profile")}
         src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/e70b1333850498.56ba69ac32ae3.png"
         alt="Avatar"
       />
