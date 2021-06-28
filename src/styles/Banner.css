@@ -26,12 +26,14 @@ button {
   height: 448px;
   object-fit: contain;
   color: var(--netflix-white);
+  overflow-x: hidden;
 }
 
 .banner__left-col {
   position: relative;
   height: 100%;
-  width: 750px;
+  width: 80%;
+  max-width: 500px;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 1),
@@ -45,6 +47,7 @@ button {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   bottom: 5em;
   gap: 1em;
 }
