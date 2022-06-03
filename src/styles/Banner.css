@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 0.4em;
+  align-items: center;
+  padding: 0.3em 1.5em;
+  border: none;
+  outline: none;
+  border-radius: 0.3em;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.banner {
+  position: relative;
+  height: 448px;
+  object-fit: contain;
+  color: var(--netflix-white);
+  overflow-x: hidden;
+}
+
+.banner__left-col {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  max-width: 500px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+}
+
+.banner__content {
+  position: absolute;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  bottom: 5em;
+  gap: 1em;
+}
+
+.banner__title {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.banner__info {
+  width: 400px;
+  font-weight: 400;
+}
+
+.banner__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.add-btn {
+  background-color: var(--netflix-black-1);
+  color: var(--netflix-white);
+}
+
+.banner__fade-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 7.4em;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}

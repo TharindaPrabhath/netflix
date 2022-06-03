@@ -1,0 +1,137 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.welcome-screen {
+  background-color: black;
+  color: var(--netflix-white);
+  font-family: sans-serif;
+  position: relative;
+}
+
+.welcome-screen h1 {
+  font-size: 2.5em;
+}
+
+.welcome-screen h2 {
+  font-size: 1.2em;
+}
+
+.welcome-screen h3 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.welcome-screen__hero {
+  background: url("../assets/welcome-screen-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 7em;
+}
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  z-index: 2;
+}
+
+.signin-btn {
+  background-color: var(--netflix-red);
+  color: var(--netflix-white);
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 0.2em;
+}
+
+.hero__overlay {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: absolute;
+}
+
+.hero__content {
+  text-align: center;
+  z-index: 2;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hero__content__input form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.hero__content__input input {
+  width: 90%;
+  max-width: 500px;
+  height: 2.5em;
+  padding-left: 0.5em;
+  font-size: 1.2em;
+  border-radius: 0.1em;
+}
+
+.get-started-btn {
+  background-color: var(--netflix-red);
+  color: var(--netflix-white);
+  font-size: 1.1em;
+  padding: 0.5em 1.3em;
+  border-radius: 0.1em;
+}
+
+.get-started-btn:hover {
+  background-color: #e90e20;
+}
+
+@media screen and (min-width: 800px) {
+  .hero__content h1,
+  .hero__content h2,
+  .hero__content p {
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__content__input form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .get-started-btn {
+    height: 2.9em;
+    border: 1px solid var(--netflix-black-1);
+  }
+}
