@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+<div style="display: flex; flex-direction: row">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+   <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase" />
+  <img src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white" alt="MUI" />
+  <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
+  </div>
+ <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="Tmdb api" width="150px" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a netflix-clone web application which was built keeping in-mind to focuss on the UI implementation rather than the actual functionalities provided by original netflix. The app is powered by [Tmdb api](https://www.themoviedb.org). Therefore it can provide real world updated content.
 
-## Available Scripts
+## Features
+- Responsive design
+- Random movie picker banner
+- Real world movie content (Trending, New releases, Top rated, Netflix originals, etc)
+- Genre wise categorized movies
 
-In the project directory, you can run:
+## Demo
+[Visit](https://netflix-ee8b4.web.app/).
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First, run the development server:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm run start
+# or
+yarn start
+```
 
-### `yarn test`
+Open [http://localhost:3000](http://localhost:3000) with your browser to interact with the app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+#### Welcome Page
+<img src="https://res.cloudinary.com/drifly/image/upload/v1654240117/GitHub/Netflix-clone/Welcome_ibouau.png" width="500px" alt="Welcome Page"/>
 
-### `yarn build`
+#### Sign in Page
+<img src="https://res.cloudinary.com/drifly/image/upload/v1654240534/GitHub/Netflix-clone/Signin_tyxrf8.png" width="300px" alt="Sign in Page"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Responsive Banner
+<img src="https://res.cloudinary.com/drifly/image/upload/v1654240118/GitHub/Netflix-clone/Responsive_banner_ljgpau.png" width="500px" alt="Responsive Banner"/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Genre Wise Categorized Movies
+<img src="https://res.cloudinary.com/drifly/image/upload/v1654240128/GitHub/Netflix-clone/Genres_sxai8h.png" width="500px" alt="Genre Wise Categorized Movies"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Responsive Footer
+<img src="https://res.cloudinary.com/drifly/image/upload/v1654240077/GitHub/Netflix-clone/Responsive_footer_jniswj.png" width="500px" alt="Responsive Footer"/>
 
-### `yarn eject`
+## Contributing
+Forks are lovely. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Credits
+Thank you `@sonnysangha` for giving me the inspiration. Always in ❤️with your content.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
